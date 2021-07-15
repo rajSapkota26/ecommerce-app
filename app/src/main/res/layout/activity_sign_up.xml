@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/btn_background_two"
+    tools:context=".loginsignup.SignUpActivity">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/_200mdp"
+        android:layout_height="@dimen/_200mdp"
+        android:layout_marginTop="@dimen/_18mdp"
+        android:src="@drawable/home_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15mdp"
+        android:padding="@dimen/_10mdp"
+        android:text="@string/create_account"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_25font_mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:padding="@dimen/_5mdp"
+        android:gravity="center_horizontal"
+        android:text="@string/otp_desc"
+        app:layout_constraintTop_toBottomOf="@id/textView21"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12font_mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_back"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10mdp"
+        android:layout_margin="@dimen/_12mdp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccpCountryCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:ccp_defaultNameCode="NP"
+             />
+
+        <EditText
+            android:id="@+id/etxPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:inputType="text"
+            android:padding="@dimen/_7mdp"
+            android:hint="@string/enter_your_phone_number"
+            android:keyboardNavigationCluster="true" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/signupBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20mdp"
+        android:background="@drawable/btn_background"
+        android:padding="@dimen/_12mdp"
+        android:text="@string/submit"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="@+id/ems"
+        app:layout_constraintStart_toStartOf="@+id/ems"
+        app:layout_constraintTop_toBottomOf="@+id/ems" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

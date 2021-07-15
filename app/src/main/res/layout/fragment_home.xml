@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_15mdp"
+    android:layout_marginBottom="@dimen/_75mdp"
+    tools:context=".dashboard.fragment.HomeFragment">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="@dimen/_56mdp"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sss"
+            app:cardCornerRadius="6dp"
+            android:layout_width="match_parent"
+            android:elevation="5dp"
+            android:backgroundTint="@color/light_blue"
+            android:layout_alignParentTop="true"
+            android:layout_height="@dimen/_180mdp">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/imageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_170mdp"
+                android:layout_margin="5dp"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorMargin="5dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="5dp"
+                app:sliderIndicatorRadius="5dp"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="3"
+
+                app:sliderStartAutoCycle="true" />
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:text="Top categories"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginTop="@dimen/_5mdp"
+            android:layout_below="@+id/sss"
+            android:padding="7dp"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/shopRecycler"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            tools:listitem="@layout/sample_categories"
+            android:layout_below="@id/tv1"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv"
+            android:layout_below="@id/shopRecycler"
+            android:layout_width="wrap_content"
+            android:text="Just For You"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:padding="7dp"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/proRecycler"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+
+            tools:listitem="@layout/sample_product"
+            android:layout_below="@id/tv"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

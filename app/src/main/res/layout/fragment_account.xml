@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.fragment.AccountFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImage_ac"
+        android:layout_width="@dimen/_96mdp"
+        android:layout_height="@dimen/_96mdp"
+        android:layout_marginTop="@dimen/_40mdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user_icon"
+        app:civ_border_color="#FF5252"
+        app:civ_border_width="@dimen/_2mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pp_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+977 9846440376"
+        android:layout_marginTop="@dimen/_15mdp"
+        app:layout_constraintEnd_toEndOf="@+id/profileImage_ac"
+        app:layout_constraintStart_toStartOf="@+id/profileImage_ac"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage_ac" />
+
+    <TextView
+        android:id="@+id/address_ac1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:padding="@dimen/_10mdp"
+        android:layout_margin="@dimen/_15mdp"
+        android:drawableRight="@drawable/arrow_icon"
+        android:background="@drawable/border_back"
+        app:layout_constraintEnd_toEndOf="@+id/pp_account"
+        app:layout_constraintStart_toStartOf="@+id/pp_account"
+        app:layout_constraintTop_toBottomOf="@+id/pp_account" />
+ <TextView
+        android:id="@+id/address_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Orders"
+        android:padding="@dimen/_10mdp"
+        android:layout_margin="@dimen/_15mdp"
+        android:drawableRight="@drawable/arrow_icon"
+        android:background="@drawable/border_back"
+        app:layout_constraintEnd_toEndOf="@+id/address_ac1"
+        app:layout_constraintStart_toStartOf="@+id/address_ac1"
+        app:layout_constraintTop_toBottomOf="@+id/address_ac1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

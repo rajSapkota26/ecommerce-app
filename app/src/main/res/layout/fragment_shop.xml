@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.fragment.ShopsFragments">
+
+    <TextView
+        android:id="@+id/text_slideshow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10mdp"
+        android:padding="@dimen/_10mdp"
+        android:text="All Shops "
+        android:background="@drawable/border_back"
+        android:textAlignment="center"
+        android:textSize="@dimen/_16font_mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shop_shopRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/_10mdp"
+        tools:listitem="@layout/sample_shop"
+        app:layout_constraintTop_toBottomOf="@+id/text_slideshow" />
+</androidx.constraintlayout.widget.ConstraintLayout>

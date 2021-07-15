@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "135204287952",
+    "project_id": "intermtermproject",
+    "storage_bucket": "intermtermproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135204287952:android:be224b22049ce7113035d5",
+        "android_client_info": {
+          "package_name": "com.IntermTermProject.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "135204287952-ktbon40cjs8v47hcrs2sk3u8f830jorn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4B6koTcX9C9X8rO75fkw7AZgzNaJu8kw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "135204287952-ktbon40cjs8v47hcrs2sk3u8f830jorn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

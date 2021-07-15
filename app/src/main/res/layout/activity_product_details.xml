@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.activity.ProductDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="vertical">
+
+        <HorizontalScrollView
+            android:id="@+id/pdl_hsv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="@dimen/_3mdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_5mdp"
+                    android:onClick="overviewScrool"
+                    android:text="Overview"
+
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/pdl_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5mdp"
+                    android:layout_marginRight="@dimen/_5mdp"
+                    android:onClick="ratingScrool"
+                    android:text="Ratings"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/pdl_productDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_5mdp"
+                    android:onClick="productDetailScrool"
+                    android:text="Product details"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/pdl_recommendation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="recommendationScrool"
+                    android:text="Recommendations"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/product_bottomBar"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_46mdp">
+
+            <LinearLayout
+                android:id="@+id/linearNsv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_10mdp"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/pdtl_product_image"
+                    android:layout_width="@dimen/_280mdp"
+                    android:layout_height="@dimen/_250mdp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_5mdp"
+                    android:src="@drawable/sample_image" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/pdlProductRate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rs. 450"
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/_18font_mdp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/pdlProductDiscount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="-3%"
+                            android:textColor="@color/orange" />
+
+                        <TextView
+                            android:id="@+id/pdlProductDiscription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Unique Glasses from china"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/pdlFavrouite"
+                            android:layout_width="@dimen/_20mdp"
+                            android:layout_height="@dimen/_20mdp"
+                            android:layout_weight="1"
+                            android:src="@drawable/favorite_icon" />
+
+                        <ImageView
+                            android:id="@+id/pdlProductShare"
+                            android:layout_width="@dimen/_20mdp"
+                            android:layout_height="@dimen/_20mdp"
+                            android:layout_weight="1"
+                            android:src="@drawable/share_icon" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pdl_product_specification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rateDetails"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    android:onClick="specificationPopUp">
+
+                    <TextView
+                        android:id="@+id/spe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/_7mdp"
+                        android:text="Specification" />
+
+                    <TextView
+                        android:id="@+id/proSpecification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10mdp"
+                        android:layout_marginTop="@dimen/_7mdp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:layout_toRightOf="@+id/spe"
+                        android:text=" Brand, flavour,Box,Content" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_20mdp"
+                        android:layout_height="@dimen/_20mdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_10mdp"
+                        android:src="@drawable/arrow_icon" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pdl_product_delivary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spec"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    android:onClick="deliveryPopUp">
+
+                    <TextView
+                        android:id="@+id/delivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/_7mdp"
+                        android:text="Delivery" />
+
+                    <TextView
+                        android:id="@+id/pdelivery"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_34mdp"
+                        android:layout_marginTop="@dimen/_7mdp"
+                        android:layout_toRightOf="@+id/delivery"
+                        android:text=" Gandaki, Pokhara merto 32 lekhnath \n Home delivery,10-12 days " />
+
+                    <ImageView
+                        android:layout_width="@dimen/_20mdp"
+                        android:layout_height="@dimen/_20mdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_10mdp"
+                        android:src="@drawable/arrow_icon" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pdl_product_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/del"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    android:onClick="servicePopUp">
+
+                    <TextView
+                        android:id="@+id/service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/_7mdp"
+
+                        android:text="Service" />
+
+                    <TextView
+                        android:id="@+id/pService"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_34mdp"
+                        android:layout_marginTop="@dimen/_7mdp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:layout_toRightOf="@+id/service"
+                        android:text=" 7 days Returns \n Change of mind is not applicable \n Warrenty not avilable" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_20mdp"
+                        android:layout_height="@dimen/_20mdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_10mdp"
+                        android:src="@drawable/arrow_icon" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7mdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ratings &amp; Reviews (0)" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15mdp"
+                        android:gravity="center"
+                        android:text="This Product has no reviews" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7mdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Question about this product(0)" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15mdp"
+                        android:gravity="center"
+                        android:text="There are no question yet. \n Ask the seller now and their answer will show \n here." />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:text="Ask Question"
+                        android:textColor="@color/orange"
+                        app:background="@null" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear360"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_10mdp"
+                        android:layout_weight="4"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_25mdp"
+                            android:layout_height="@dimen/_25mdp"
+                            android:layout_weight=".2"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/sample_image" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical"
+                            android:text="Sapkota store" />
+
+                        <Button
+                            android:layout_width="@dimen/_70mdp"
+                            android:layout_height="@dimen/_35mdp"
+                            android:layout_marginRight="@dimen/_15mdp"
+                            android:layout_weight=".2"
+                            android:backgroundTint="@color/white"
+                            android:text="Follow"
+                            android:textColor="@color/orange"
+                            app:background="@null" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_16mdp"
+                        android:layout_weight="3"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_2mdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_back"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="88%"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_16font_mdp" />
+
+                            <TextView
+                                android:id="@+id/textView12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:gravity="center_horizontal"
+                                android:text="Postivie Seller \n Ratings" />
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_2mdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_back"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="89%"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_16font_mdp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Ship on time \n     " />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_2mdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_back"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="95%"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_16font_mdp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Chat response \n Rate" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/visitStore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:text="Visit Store"
+                        android:textColor="@color/orange"
+                        app:background="@null" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pdl_product_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7mdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Product details" />
+
+                    <TextView
+                        android:id="@+id/pDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5mdp"
+                        android:text=". branded item "
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear460"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15mdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_justForyou"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_7mdp"
+                        android:text="Just For You"
+                        android:textSize="@dimen/_16font_mdp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/pdlProductRecyclerview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/sample_product" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_56mdp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="@dimen/_20mdp"
+        android:background="@color/white"
+        android:gravity="center">
+
+
+        <LinearLayout
+            android:id="@+id/pdl_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10mdp"
+            android:layout_marginRight="@dimen/_10mdp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="clickOnStore"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_15mdp"
+                android:layout_height="@dimen/_15mdp"
+                android:src="@drawable/sample_image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="store" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pdl_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10mdp"
+            android:layout_marginRight="@dimen/_10mdp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="clickOnChat"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_15mdp"
+                android:layout_height="@dimen/_15mdp"
+                android:src="@drawable/sample_image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chat" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/pdl_buyNow_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/dark_blue"
+            android:onClick="buyNowClicked"
+            android:padding="@dimen/_7mdp"
+            android:text="Buy now"
+            app:background="@null" />
+
+        <Button
+            android:id="@+id/pdl_addToCart_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10mdp"
+            android:layout_marginRight="@dimen/_10mdp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:onClick="addtoCartClicked"
+            android:padding="@dimen/_7mdp"
+            android:text="Add to cart"
+            app:background="@null" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

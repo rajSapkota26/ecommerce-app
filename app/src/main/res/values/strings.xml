@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">IntermTermProject</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Song ran</string>
+    <string name="nav_header_subtitle">songran.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="logout">Logout</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_cart">MyCart</string>
+    <string name="menu_shop">Shops</string>
+    <string name="email_or_phone">Email or phone</string>
+    <string name="password">Password</string>
+    <string name="login_account">Login Account</string>
+    <string name="login">login</string>
+    <string name="submit">submit</string>
+    <string name="dont_have_an_account">dont have an account</string>
+    <string name="already_have_an_account">Already have an account</string>
+    <string name="create_account">Create Account</string>
+
+    <string name="open">Start</string>
+    <string name="close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="search">Search</string>
+    <string name="account">Account</string>
+    <string name="mycart">MyCart</string>
+    <string name="otp_desc">if you have this phone on current device \n otp auto select otherwise you need to input otp code</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="title_activity_address">Map</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="product_details">. can wear at night as night vision is clear \n demo text \n demo text
+    \n . can wear at night as night vision is clear \n demo text \n demo text
+    </string>
+    <string name="myorders">MyOrders</string>
+</resources>

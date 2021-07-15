@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/_5mdp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/order_image"
+                android:layout_width="@dimen/_100mdp"
+                android:layout_height="@dimen/_100mdp"
+                android:src="@drawable/sample_image" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="@dimen/_10mdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/order_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_14font_mdp"
+                    android:layout_marginBottom="@dimen/_5mdp"
+                    android:textColor="@color/black"
+                    android:text="OrderId:" />
+
+                <TextView
+                    android:id="@+id/order_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_14font_mdp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="@dimen/_5mdp"
+                    android:text="Items:" />
+
+                <TextView
+                    android:id="@+id/order_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_14font_mdp"
+                    android:textColor="@color/dark_blue"
+                    android:text="Status:" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_5mdp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/order_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_3mdp"
+                android:padding="@dimen/_5mdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_background"
+                app:backgroundTint="@null"
+                android:text="Detail" />
+
+            <Button
+                android:id="@+id/order_trace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_3mdp"
+                android:padding="@dimen/_3mdp"
+                android:layout_weight="1"
+                android:background="@drawable/border_back"
+                app:backgroundTint="@null"
+                android:textColor="@color/black"
+                android:text="Track " />
+            <Button
+                android:id="@+id/order_payproceed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_3mdp"
+                android:padding="@dimen/_3mdp"
+                android:layout_weight="1"
+                android:background="@drawable/border_back"
+                app:backgroundTint="@null"
+                android:textColor="@color/black"
+                android:text="pay" />
+            <Button
+                android:id="@+id/order_remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_3mdp"
+                android:padding="@dimen/_3mdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_background"
+                app:backgroundTint="@null"
+                android:text="Remove" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_2mdp"
+    android:elevation="@dimen/_7mdp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_2mdp">
+
+        <ImageView
+            android:id="@+id/product_image"
+            android:layout_width="@dimen/_150mdp"
+            android:layout_height="@dimen/_150mdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_3mdp"
+            android:src="@drawable/sample_image" />
+
+        <TextView
+            android:id="@+id/product_title"
+            android:layout_width="@dimen/_120mdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_image"
+            android:layout_marginLeft="@dimen/_7mdp"
+            android:text="Special watch made in japan"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/product_rate"
+            android:layout_width="@dimen/_120mdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_title"
+            android:layout_marginLeft="@dimen/_7mdp"
+            android:layout_marginTop="@dimen/_2mdp"
+            android:text="Rs. 399"
+            android:textColor="@color/dark_orange" />
+
+        <TextView
+            android:id="@+id/product_discount_rate"
+            android:layout_width="@dimen/_120mdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_rate"
+            android:layout_marginLeft="@dimen/_7mdp"
+            android:layout_marginTop="@dimen/_2mdp"
+            android:text="Rs. 35"
+            android:textColor="@color/dark_orange" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

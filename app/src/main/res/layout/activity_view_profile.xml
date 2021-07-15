@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.activity.AddUserProfileActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/vprofileImage"
+        android:layout_width="@dimen/_96mdp"
+        android:layout_height="@dimen/_96mdp"
+        android:layout_marginTop="@dimen/_40mdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user_icon"
+        app:civ_border_color="#FFFF00"
+        app:civ_border_width="@dimen/_2mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vaddress_ac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15mdp"
+        android:text="Full name"
+        app:drawableStartCompat="@drawable/user_icon"
+        android:drawablePadding="@dimen/_7mdp"
+        android:background="@drawable/border_back"
+        android:padding="@dimen/_8mdp"
+        app:layout_constraintEnd_toEndOf="@+id/vprofileImage"
+        app:layout_constraintStart_toStartOf="@+id/vprofileImage"
+        app:layout_constraintTop_toBottomOf="@+id/vprofileImage" />
+
+    <TextView
+        android:id="@+id/vpp_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15mdp"
+        android:text="Mobile"
+        app:drawableStartCompat="@drawable/call_icon"
+        android:drawablePadding="@dimen/_7mdp"
+        android:background="@drawable/border_back"
+        android:padding="@dimen/_8mdp"
+        app:layout_constraintEnd_toEndOf="@+id/vaddress_ac"
+        app:layout_constraintStart_toStartOf="@+id/vaddress_ac"
+        app:layout_constraintTop_toBottomOf="@+id/vaddress_ac" />
+
+    <TextView
+        android:id="@+id/vpp_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15mdp"
+        android:text="Email"
+        app:drawableStartCompat="@drawable/email_icon"
+        android:drawablePadding="@dimen/_7mdp"
+        android:background="@drawable/border_back"
+        android:padding="@dimen/_8mdp"
+        app:layout_constraintEnd_toEndOf="@+id/vpp_mobile"
+        app:layout_constraintStart_toStartOf="@+id/vpp_mobile"
+        app:layout_constraintTop_toBottomOf="@+id/vpp_mobile" />
+
+    <TextView
+        android:id="@+id/vpp_region"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15mdp"
+        app:drawableStartCompat="@drawable/location_icon"
+        android:drawablePadding="@dimen/_7mdp"
+        android:text="Region"
+        android:background="@drawable/border_back"
+        android:padding="@dimen/_8mdp"
+        app:layout_constraintEnd_toEndOf="@+id/vpp_email"
+        app:layout_constraintStart_toStartOf="@+id/vpp_email"
+        app:layout_constraintTop_toBottomOf="@+id/vpp_email" />
+
+    <TextView
+        android:id="@+id/vpp_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15mdp"
+        app:drawableStartCompat="@drawable/location_icon"
+        android:drawablePadding="@dimen/_7mdp"
+        android:text="City"
+        android:background="@drawable/border_back"
+        android:padding="@dimen/_8mdp"
+        app:layout_constraintEnd_toEndOf="@+id/vpp_region"
+        app:layout_constraintStart_toStartOf="@+id/vpp_region"
+        app:layout_constraintTop_toBottomOf="@+id/vpp_region" />
+
+    <TextView
+        android:id="@+id/vpp_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15mdp"
+        android:drawablePadding="@dimen/_7mdp"
+        android:text="Area"
+        android:background="@drawable/border_back"
+        android:padding="@dimen/_8mdp"
+        app:layout_constraintEnd_toEndOf="@+id/vpp_city"
+        app:layout_constraintStart_toStartOf="@+id/vpp_city"
+        app:layout_constraintTop_toBottomOf="@+id/vpp_city"
+        app:drawableStartCompat="@drawable/location_icon" />
+
+    <TextView
+        android:id="@+id/vpp_deliveryAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15mdp"
+        app:drawableStartCompat="@drawable/location_icon"
+        android:drawablePadding="@dimen/_7mdp"
+        android:text="delivery address"
+        android:background="@drawable/border_back"
+        android:padding="@dimen/_8mdp"
+        app:layout_constraintEnd_toEndOf="@+id/vpp_area"
+        app:layout_constraintStart_toStartOf="@+id/vpp_area"
+        app:layout_constraintTop_toBottomOf="@+id/vpp_area" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

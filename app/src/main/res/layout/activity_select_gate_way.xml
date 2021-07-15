@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.activity.SelectGateWayActivity">
+
+    <TextView
+        android:id="@+id/ax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="@dimen/_35mdp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/border_back"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/_10mdp"
+        android:text="Select payment Option"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+<LinearLayout
+    android:id="@+id/paydet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="@+id/ax"
+    app:layout_constraintStart_toStartOf="@+id/ax"
+    app:layout_constraintTop_toBottomOf="@+id/ax"
+    android:layout_margin="@dimen/_32mdp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/totalAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:padding="@dimen/_5mdp"
+        android:textSize="@dimen/_16font_mdp"
+        android:textColor="@color/black"
+        android:text="Total Amount:" />
+
+    <TextView
+        android:id="@+id/totalTax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:padding="@dimen/_5mdp"
+        android:textSize="@dimen/_16font_mdp"
+        android:textColor="@color/black"
+        android:text="Tax:" />
+
+    <TextView
+        android:id="@+id/totalIncludeTax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:padding="@dimen/_5mdp"
+        android:textSize="@dimen/_16font_mdp"
+        android:textColor="@color/black"
+        android:text="Total Amount(include tax):" />
+
+</LinearLayout>
+    <Button
+        android:id="@+id/btn_esewa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Esewa"
+        android:onClick="payBalance"
+        android:background="@drawable/btn_background"
+        android:padding="15dp"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="@+id/paydet"
+        app:layout_constraintStart_toStartOf="@+id/paydet"
+        app:layout_constraintTop_toBottomOf="@+id/paydet" />
+    <Button
+        android:id="@+id/btn_Paypal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="PayPal"
+        android:background="@drawable/border_back"
+        android:padding="15dp"
+        app:backgroundTint="@null"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/btn_esewa"
+        app:layout_constraintStart_toStartOf="@+id/btn_esewa"
+        app:layout_constraintTop_toBottomOf="@+id/btn_esewa" />
+    <Button
+        android:id="@+id/btn_bankTransfer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Bank transfer"
+        android:background="@drawable/btn_background"
+        android:padding="15dp"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Paypal"
+        app:layout_constraintStart_toStartOf="@+id/btn_Paypal"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Paypal" />
+</androidx.constraintlayout.widget.ConstraintLayout>

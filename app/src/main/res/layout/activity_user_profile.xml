@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.activity.AddUserProfileActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImage"
+        android:layout_width="@dimen/_96mdp"
+        android:layout_height="@dimen/_96mdp"
+        android:layout_marginTop="@dimen/_40mdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/add_icon"
+        app:civ_border_color="#FFFF00"
+        app:civ_border_width="@dimen/_2mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/address_ac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15mdp"
+        android:inputType="text"
+        android:hint="Full name"
+        app:layout_constraintEnd_toEndOf="@+id/profileImage"
+        app:layout_constraintStart_toStartOf="@+id/profileImage"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+    <EditText
+        android:id="@+id/pp_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15mdp"
+        android:inputType="text"
+        android:hint="Mobile"
+        app:layout_constraintEnd_toEndOf="@+id/address_ac"
+        app:layout_constraintStart_toStartOf="@+id/address_ac"
+        app:layout_constraintTop_toBottomOf="@+id/address_ac" />
+ <EditText
+        android:id="@+id/pp_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15mdp"
+        android:inputType="text"
+        android:hint="Email"
+        app:layout_constraintEnd_toEndOf="@+id/pp_mobile"
+        app:layout_constraintStart_toStartOf="@+id/pp_mobile"
+        app:layout_constraintTop_toBottomOf="@+id/pp_mobile" />
+
+    <EditText
+        android:id="@+id/pp_region"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15mdp"
+        android:inputType="textPersonName"
+        android:hint="Region"
+        android:drawableLeft="@drawable/location_icon"
+        android:drawablePadding="@dimen/_7mdp"
+        app:layout_constraintEnd_toEndOf="@+id/pp_email"
+        app:layout_constraintStart_toStartOf="@+id/pp_email"
+        app:layout_constraintTop_toBottomOf="@+id/pp_email" />
+
+    <EditText
+        android:id="@+id/pp_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15mdp"
+        android:inputType="textPersonName"
+        android:hint="City"
+        android:drawableLeft="@drawable/location_icon"
+        android:drawablePadding="@dimen/_7mdp"
+        app:layout_constraintEnd_toEndOf="@+id/pp_region"
+        app:layout_constraintStart_toStartOf="@+id/pp_region"
+        app:layout_constraintTop_toBottomOf="@+id/pp_region" />
+
+    <EditText
+        android:id="@+id/pp_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15mdp"
+        android:inputType="textPersonName"
+        android:hint="Area"
+        android:drawableLeft="@drawable/location_icon"
+        android:drawablePadding="@dimen/_7mdp"
+        app:layout_constraintEnd_toEndOf="@+id/pp_city"
+        app:layout_constraintStart_toStartOf="@+id/pp_city"
+        app:layout_constraintTop_toBottomOf="@+id/pp_city" />
+    <EditText
+        android:id="@+id/pp_deliveryAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15mdp"
+        android:inputType="textPersonName"
+        android:hint="delivery address"
+        android:drawableLeft="@drawable/location_icon"
+        android:drawablePadding="@dimen/_7mdp"
+        app:layout_constraintEnd_toEndOf="@+id/pp_area"
+        app:layout_constraintStart_toStartOf="@+id/pp_area"
+        app:layout_constraintTop_toBottomOf="@+id/pp_area" />
+
+    <Button
+        android:id="@+id/pp_save_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_background"
+        app:backgroundTint="@null"
+        android:text="save"
+        android:onClick="saveProfile"
+        android:layout_margin="@dimen/_20mdp"
+        app:layout_constraintEnd_toEndOf="@+id/pp_deliveryAddress"
+        app:layout_constraintStart_toStartOf="@+id/pp_deliveryAddress"
+        app:layout_constraintTop_toBottomOf="@+id/pp_deliveryAddress" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
