@@ -7,12 +7,11 @@
 
     <ImageView
         android:id="@+id/iv_auto_image_slider"
-        android:layout_width="@dimen/_180mdp"
+        android:layout_width="@dimen/_181mdp"
         android:layout_height="@dimen/_150mdp"
         android:layout_gravity="center"
         android:src="@drawable/sample_image"
         android:scaleType="fitXY" />
-
 
     <FrameLayout
         android:id="@+id/fl_shadow_container"
@@ -20,7 +19,6 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_30mdp"
         android:layout_gravity="bottom">
-
         <TextView
             android:id="@+id/tv_auto_image_slider"
             android:layout_width="match_parent"

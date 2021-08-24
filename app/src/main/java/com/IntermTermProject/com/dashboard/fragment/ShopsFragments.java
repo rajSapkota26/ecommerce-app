@@ -15,9 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.IntermTermProject.com.R;
 import com.IntermTermProject.com.dashboard.adapter.CategoriesAdapter;
-import com.IntermTermProject.com.dashboard.adapter.ShopsAdapter;
 import com.IntermTermProject.com.dashboard.model.Categories;
-import com.IntermTermProject.com.dashboard.model.Shop;
 import com.IntermTermProject.com.dashboard.server.api.ApiRegister;
 import com.IntermTermProject.com.dashboard.server.service.CategoryService;
 
