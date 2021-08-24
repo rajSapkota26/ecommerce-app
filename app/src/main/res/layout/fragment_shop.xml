@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_10mdp"
         android:padding="@dimen/_10mdp"
-        android:text="All Shops "
+        android:text="All Categories "
         android:background="@drawable/border_back"
         android:textAlignment="center"
         android:textSize="@dimen/_16font_mdp"
@@ -28,6 +28,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="@dimen/_10mdp"
-        tools:listitem="@layout/sample_shop"
+        tools:listitem="@layout/sample_categories"
         app:layout_constraintTop_toBottomOf="@+id/text_slideshow" />
 </androidx.constraintlayout.widget.ConstraintLayout>

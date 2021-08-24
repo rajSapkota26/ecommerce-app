@@ -9,7 +9,7 @@ import com.IntermTermProject.com.dashboard.server.service.SliderService;
 import com.IntermTermProject.com.dashboard.server.service.UserProfileService;
 
 public class ApiRegister {
-    public static final String URL_001 = "http://192.168.0.104:5050/myshop-1.0.0/";
+    public static final String URL_001 = "http://192.168.0.106:5050/myshop-1.0.0/";
     private static RetrofitInstance Client;
 
 

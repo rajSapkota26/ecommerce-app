@@ -137,8 +137,8 @@ public class HomeFragment extends Fragment {
             public void onResponse(Call<List<Categories>> call, Response<List<Categories>> response) {
                 categories = response.body();
                 dialog.dismiss();
-                System.out.println(categories.toString());
-                categoriesAdapter = new CategoriesAdapter(getContext(), categories);
+            List<Categories> c1=  categories.subList(0,8);
+                categoriesAdapter = new CategoriesAdapter(getContext(), c1);
                 categoryRecycler.setLayoutManager(new GridLayoutManager(getContext(), 4));
                 categoryRecycler.setAdapter(categoriesAdapter);
                 categoriesAdapter.notifyDataSetChanged();
