@@ -55,14 +55,14 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.viewHolder
         MyCart cart = myCarts.get(position);
 
         Glide.with(context).load(cart.getProductImage()).placeholder(R.drawable.sample_image).into(holder.image);
-        holder.name.setText(cart.getProductName());
+        holder.name.setText("Product:"+cart.getProductName());
 
         holder.qnty.setText("Items:"+String.valueOf(cart.getQuantities()));
 
         int pPrice=(Integer.parseInt(cart.getProductPrice())*cart.getQuantities());
         int pdis=(Integer.parseInt(cart.getProductDiscount())*cart.getQuantities());
         int totalprice=pPrice-pdis;
-        holder.price.setText("Rs:"+pPrice+"-"+"Rs:"+pdis+"= Rs:"+totalprice);
+        holder.price.setText("Rs:"+pPrice+"-"+pdis+"= Rs:"+totalprice);
 
         holder.ok.setOnClickListener(new View.OnClickListener() {
             @Override

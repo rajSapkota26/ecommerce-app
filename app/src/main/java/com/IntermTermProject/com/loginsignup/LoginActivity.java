@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
         FirebaseAuth.getInstance().getFirebaseAuthSettings().forceRecaptchaFlowForTesting(false);
         getOtpCode();
         Toast.makeText(LoginActivity.this, otpId, Toast.LENGTH_SHORT).show();
-        inboxstyle_Notification(otpId);
+
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,6 +88,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
                         otpId = s;
+                        inboxstyle_Notification(otpId);
                         Toast.makeText(LoginActivity.this, otpId, Toast.LENGTH_SHORT).show();
                         progressDialog.dismiss();
                     }
