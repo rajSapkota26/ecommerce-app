@@ -4,6 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_margin="@dimen/_5mdp"
+    android:padding="@dimen/_5mdp"
+    android:elevation="@dimen/_10mdp"
     android:layout_height="wrap_content">
 
     <LinearLayout

@@ -4,6 +4,7 @@
     android:layout_width="wrap_content"
     android:elevation="@dimen/_10mdp"
     android:layout_margin="@dimen/_5mdp"
+
     android:layout_height="wrap_content">
 <RelativeLayout
     android:layout_width="wrap_content"

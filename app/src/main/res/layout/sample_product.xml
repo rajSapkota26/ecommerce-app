@@ -3,6 +3,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/_2mdp"
+    android:padding="@dimen/_5mdp"
     android:elevation="@dimen/_7mdp">
 
     <RelativeLayout

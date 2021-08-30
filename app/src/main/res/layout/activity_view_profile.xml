@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B0FFAB40"
     tools:context=".dashboard.activity.AddUserProfileActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -13,7 +14,7 @@
         android:layout_marginTop="@dimen/_40mdp"
         android:scaleType="centerCrop"
         android:src="@drawable/user_icon"
-        app:civ_border_color="#FFFF00"
+        app:civ_border_color="#18FFFF"
         app:civ_border_width="@dimen/_2mdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

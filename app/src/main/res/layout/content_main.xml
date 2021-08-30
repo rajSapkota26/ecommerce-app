@@ -25,6 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:itemIconTint="@color/dark_blue"
         app:itemTextColor="@color/dark_orange"
+        android:elevation="@dimen/_10mdp"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_menu_item" />
 

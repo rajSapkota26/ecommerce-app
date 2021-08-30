@@ -35,9 +35,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10mdp"
-        android:padding="@dimen/_5mdp"
-        android:textSize="@dimen/_16font_mdp"
+        android:padding="@dimen/_7mdp"
+        android:textSize="@dimen/_14font_mdp"
+        android:background="@drawable/border_back"
         android:textColor="@color/black"
+        android:drawableLeft="@drawable/money_ic"
         android:text="Total Amount:" />
 
     <TextView
@@ -45,8 +47,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10mdp"
-        android:padding="@dimen/_5mdp"
-        android:textSize="@dimen/_16font_mdp"
+        android:padding="@dimen/_7mdp"
+        android:background="@drawable/border_back"
+        android:textSize="@dimen/_14font_mdp"
+        android:drawableLeft="@drawable/money_ic"
         android:textColor="@color/black"
         android:text="Tax:" />
 
@@ -55,10 +59,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10mdp"
-        android:padding="@dimen/_5mdp"
-        android:textSize="@dimen/_16font_mdp"
+        android:background="@drawable/border_back"
+        android:padding="@dimen/_7mdp"
+        android:textSize="@dimen/_14font_mdp"
+        android:drawableLeft="@drawable/money_ic"
         android:textColor="@color/black"
-        android:text="Total Amount(include tax):" />
+        android:text="Total Amount(with tax):" />
 
 </LinearLayout>
     <Button

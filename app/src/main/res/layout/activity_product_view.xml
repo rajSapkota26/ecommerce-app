@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/_5mdp"
+    android:elevation="@dimen/_10mdp"
     tools:context=".dashboard.activity.ProductViewActivity">
 <LinearLayout
     android:layout_width="match_parent"
