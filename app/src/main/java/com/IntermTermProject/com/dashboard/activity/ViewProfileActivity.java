@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.IntermTermProject.com.R;
 import com.IntermTermProject.com.dashboard.model.UserProfile;
 import com.IntermTermProject.com.dashboard.server.api.ApiRegister;
 import com.IntermTermProject.com.dashboard.server.service.UserProfileService;
+import com.IntermTermProject.com.loginsignup.SignUpActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -35,6 +37,9 @@ public class ViewProfileActivity extends AppCompatActivity {
         area = findViewById(R.id.vpp_area);
         address = findViewById(R.id.vpp_deliveryAddress);
         user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user==null){
+            startActivity(new Intent(this, SignUpActivity.class));
+        }
         profile = new UserProfile();
         service = ApiRegister.getUserProfileService();
         Call<UserProfile> ppcall = service.getProfile(user.getUid());

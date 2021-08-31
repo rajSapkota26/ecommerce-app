@@ -60,6 +60,7 @@ public class LoginActivity extends AppCompatActivity {
         getOtpCode();
         Toast.makeText(LoginActivity.this, otpId, Toast.LENGTH_SHORT).show();
 
+
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,8 +88,9 @@ public class LoginActivity extends AppCompatActivity {
                 .setCallbacks(new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
                     @Override
                     public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                        inboxstyle_Notification(s);
                         otpId = s;
-                        inboxstyle_Notification(otpId);
+
                         Toast.makeText(LoginActivity.this, otpId, Toast.LENGTH_SHORT).show();
                         progressDialog.dismiss();
                     }
@@ -103,6 +105,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onVerificationFailed(@NonNull FirebaseException e) {
                         progressDialog.dismiss();
+                        inboxstyle_Notification(otpId);
                         Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }).build();
@@ -136,7 +139,7 @@ public class LoginActivity extends AppCompatActivity {
         builder.setSmallIcon(R.drawable.sample_image)
                 .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.sample_image))
                 //tou can add lines with different number of messages arrived
-                .setStyle(new NotificationCompat.InboxStyle().addLine(otpcode).addLine("with in 1 minute").setBigContentTitle("Please submit your OTP code").setSummaryText("Inbox"))
+                .setStyle(new NotificationCompat.InboxStyle().addLine(otpcode).addLine("with in 1 minute"+otpcode).setBigContentTitle("Please submit your OTP code").setSummaryText("Inbox"))
                 .setAutoCancel(true);
 
         Uri path = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
